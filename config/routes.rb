@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
   # Routes for the user resource:
-  # READ
-  get "/users", :controller => "users", :action => "index"
-  get "/users/:id", :controller => "users", :action => "show"
-
 
   # Routes for the Comment resource:
   root "photos#index"
@@ -61,5 +57,12 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+
+  # READ
+  get "/users", :controller => "users", :action => "index"
+  get "/users/:id", :controller => "users", :action => "show"
+
+  # READ
+  get "/my_likes", :controller => "mylikes", :action => "index"
 
 end
